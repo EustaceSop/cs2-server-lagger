@@ -1,7 +1,6 @@
 # CS2 Server Lagger 原理分析
 
-> 本文為既有程式碼（`crash.cpp`）的靜態分析紀錄，僅供安全研究與防禦側理解使用。
-> 不包含任何建置、部署或強化指引。
+> 本文為既有程式碼（`crash.cpp`）的靜態分析紀錄。
 
 ---
 
@@ -178,7 +177,3 @@ make_voice_payload(profile, 隨機 xuid, current_tick)
 | `INetChannel` | 遊戲內部網路通道物件，負責可靠/不可靠傳輸 |
 | `INVOKE_VCALL` | 對遊戲物件做混淆索引的虛表呼叫 |
 | `xorn` / `xors` | 編譯期 XOR 混淆的數值/字串 |
-
----
-
-*分析範圍：`crash.cpp` / `message (5).txt`（兩檔內容相同，後者少一行結尾）。*
